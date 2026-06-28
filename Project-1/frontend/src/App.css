@@ -1,0 +1,237 @@
+/* App.css - Styling for the Product Store */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #aaa;
+}
+
+/* Form Section */
+.form-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  margin-bottom: 15px;
+  color: #282c34;
+}
+
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-form input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.product-form input:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
+.product-form button {
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-form button:hover {
+  background-color: #4bb8e8;
+}
+
+/* Products Section */
+.products-section h2 {
+  margin-bottom: 20px;
+  color: #282c34;
+}
+
+/* Cards Grid */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Card */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #282c34;
+}
+
+.card .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 8px;
+}
+
+.card .description {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ── Card Action Buttons ── */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.btn-edit, .btn-delete {
+  flex: 1;
+  padding: 7px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #e09a3a;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+/* ── Edit Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  color: #282c34;
+}
+
+.product-form.vertical {
+  flex-direction: column;
+}
+
+.product-form.vertical input {
+  width: 100%;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn-save {
+  flex: 1;
+  padding: 10px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background-color: #219a52;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 10px;
+  background-color: #bbb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background-color: #999;
+}
